@@ -1,4 +1,6 @@
+import Script from 'next/script'
 import { Manrope } from 'next/font/google'
+import Providers from './providers'
 import './globals.css'
 
 const manrope = Manrope({
@@ -15,9 +17,16 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html className={manrope.variable} lang="en">
+    <html className={manrope.variable} lang="en" suppressHydrationWarning>
+      <head>
+        <Script src="https://telegram.org/js/telegram-web-app.js" strategy="beforeInteractive" />
+      </head>
       <body>
-        {children}
+        <Providers>
+          <main className="wrapper">
+            {children}
+          </main>
+        </Providers>
       </body>
     </html>
   )
