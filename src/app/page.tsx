@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <>
       <h2 className="text-2xl font-bold">Hello, {telegram.initDataUnsafe?.user?.first_name || 'user'}</h2>
-      <p className="text-neutral-400">Let's create a Telegram Web App!</p>
+      <p className="text-neutral-400">Let&apos;s create a Telegram Web App!</p>
       <div className="flex gap-2 mt-2">
         <div className="bg-neutral-800 rounded-lg text-2xl px-4 py-2 grow">
           <span className="block text-xs text-neutral-400 font-semibold tracking-wider uppercase">Counter</span>
