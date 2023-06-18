@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-neutral-900 text-neutral-100;
+  }
+}
+
+@layer components {
+  .wrapper {
+    @apply bg-neutral-800/50 sm:w-[375px] min-h-screen mx-auto p-6;
+  }
+}
